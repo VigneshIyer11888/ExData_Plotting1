@@ -22,3 +22,8 @@ powerCondata <- read.csv("./Exploratory Data Analysis Project-1/exdata_data_hous
                          sep = ";",
                          na.strings = "?" )
 
+subsetPowerData <-  subset(powerCondata, powerCondata$Date == "1/2/2007" | powerCondata$Date =="2/2/2007")
+
+hist(subsetPowerData$Global_active_power, main="Global Active Power", xlab="Global Active Power (kilowatts)", ylab="Frequency", col="Red")
+
+png("plot1.png", width = 480, height = 480)
